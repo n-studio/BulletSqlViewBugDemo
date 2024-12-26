@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = ProductsView.all
+    @products = ProductsView.select(:name)
   end
 
   # GET /products/1 or /products/1.json
