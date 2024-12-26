@@ -4,9 +4,9 @@
 
 <div id="products">
   <% @products.each do |product| %>
-    <%= render product %>
+    <%= render partial: "products/product", locals: { product: } %>
     <p>
-      <%= link_to "Show this product", product %>
+      <%= link_to "Show this product", product_path(product.id) %>
     </p>
   <% end %>
 </div>
